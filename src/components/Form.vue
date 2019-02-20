@@ -22,8 +22,8 @@
       <button
         type="button"
         class="search-btn"
-        :disabled="inpDisabled"
-        :class="{'disabled-btn' : inpDisabled}"
+        :disabled="inpDisabled || !searchEncode.length"
+        :class="{'disabled-btn' : inpDisabled || !searchEncode.length}"
         @click="searchData(searchEncode)"
       >查询</button>
     </div>
